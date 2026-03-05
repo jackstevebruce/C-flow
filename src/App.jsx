@@ -34,7 +34,7 @@ function App() {
     setIsLoading(true);
     setPdfUrl(null);
 
-    const WEBHOOK_URL = "https://n8n.iamsherlock.online/webhook/demo-certificate";
+    const WEBHOOK_URL = import.meta.env.VITE_DEMO_WEBHOOK_URL;
     const payload = new FormData();
 
     payload.append("eventName", formData.eventName);
@@ -78,7 +78,7 @@ function App() {
   const handleMassDistribution = async () => {
   setIsMassSending(true);
 
-  const FRIEND_WEBHOOK_URL = "https://nothingxd77.app.n8n.cloud/webhook-test/certify";
+  const FRIEND_WEBHOOK_URL = import.meta.env.VITE_FRIEND_WEBHOOK_URL;
 
   const payload = new FormData();
 
